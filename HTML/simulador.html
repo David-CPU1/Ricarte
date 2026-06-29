@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Internet — Simulador</title>
+    <link rel="stylesheet" href="../CSS/Index.css" />
+    <link rel="stylesheet" href="../CSS/Simulador.css">
+</head>
+<body>
+
+  <!-- Fondos decorativos -->
+  <div class="fondo-grilla" aria-hidden="true"></div>
+  <div class="fondo-brillo" aria-hidden="true"></div>
+
+  <!-- ===== NAVEGACIÓN ===== -->
+  <nav class="barra-nav">
+    <div class="contenido-nav">
+
+      <a href="index.html" class="logo" aria-label="Ghost Internet - Ir al inicio">
+        <div class="logo__contenedor-icono">
+          <img src="../SVG/escudo.svg" alt="" class="logo__icono" aria-hidden="true" />
+        </div>
+        <span class="logo__texto">
+          GHOST<span class="logo__guion">_</span>NET
+        </span>
+      </a>
+
+      <ul class="enlaces-nav" role="navigation" aria-label="Menú principal">
+        <li class="enlaces-nav__elemento">
+          <a href="index.html">Inicio</a>
+        </li>
+        <li class="enlaces-nav__elemento menu-desplegable">
+          <a href="#" class="menu-desplegable__toggle">
+            <span>Herramientas</span>
+            <img src="../SVG/flecha-herramientas.svg" alt="" class="icono-flecha" aria-hidden="true" />
+          </a>
+          <ul class="submenu">
+            <li><a href="EvaluacionContraseña.html">Contraseñas</a></li>
+            <li><a href="VerificarCorreo.html">Correos</a></li>
+            <li><a href="PerfildeRiesgo.html">Perfil de Riesgo</a></li>
+          </ul>
+        </li>
+        <li class="enlaces-nav__elemento">
+          <a href="Estadisticas.html">Estadísticas</a>
+        </li>
+        <li class="enlaces-nav__elemento enlaces-nav__elemento--activo">
+          <a href="simulador.html">Simulador</a>
+        </li>
+      </ul>
+
+      <div class="zona-auth">
+        <button class="boton-borde" type="button">Iniciar sesión</button>
+        <a href="Registrarse.html" class="boton-primario" style="text-decoration: none;">Registrarse</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="contenido-principal">
+    <section class="seccion">
+      <div class="title">
+          <div class="icon-box">
+              <img src="../SVG/rayo.svg" class="icono-grande" alt="Rayo">
+          </div>
+          <div>
+              <h1>Simulador de Riesgos</h1>
+              <p>Simula ataques en una red ficticia y aprende cómo prevenirlos.</p>
+          </div>
+      </div>
+
+    <div class="layout">
+
+        <div class="panel">
+            <h3>// Seleccionar dispositivo</h3>
+
+            <div class="item yellow active">
+                <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="3" width="20" height="12" rx="2"/>
+                    <rect x="4" y="5" width="16" height="8" rx="1" stroke-opacity="0.16"/>
+                    <path d="M10 17h4"/>
+                    <rect x="8" y="18" width="8" height="1.5" rx="0.6"/>
+                </svg>
+                <div>
+                    <span class="device-name">PC de Trabajo</span>
+                    <span class="vuln-text">Vuln: Media</span>
+                </div>
+                <div class="check-mark">✓</div>
+            </div>
+
+            <div class="item blue">
+                <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>
+                    <rect x="9.5" y="16.5" width="5" height="1" rx="0.5"/>
+                    <path d="M18 7v2" stroke-opacity="0.7"/>
+                </svg>
+                <div>
+                    <span class="device-name">Smartphone</span>
+                    <span class="vuln-text">Vuln: Media</span>
+                </div>
+                <div class="check-mark">✓</div>
+            </div>
+
+        </div>
+
+        <div class="panel panel-right">
+            <h3>// Red ficticia</h3>
+
+            <div class="network">
+                <div class="node left under-attack">
+                    <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="3" width="20" height="12" rx="2"/>
+                        <rect x="4" y="5" width="16" height="8" rx="1" stroke-opacity="0.16"/>
+                        <path d="M10 17h4"/>
+                        <rect x="8" y="18" width="8" height="1.5" rx="0.6"/>
+                    </svg>
+                    PC de Trabajo
+                </div>
+                <div class="node right">
+                    <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>
+                        <rect x="9.5" y="16.5" width="5" height="1" rx="0.5"/>
+                        <path d="M18 7v2" stroke-opacity="0.7"/>
+                    </svg>
+                    Smartphone
+                </div>
+                <div class="connection-line"></div>
+            </div>
+
+            <div class="simulation-area">
+                <div class="simulation-status">
+                    <span class="status-dot running"></span>
+                    <span class="status-text">⚡ Ejecutando Fuerza Bruta en PC de Trabajo (60%)</span>
+                </div>
+                <div class="simulation-log">
+                    <p class="log-entry">🟢 Sistema listo para simular</p>
+                    <p class="log-entry">📱 Dispositivo seleccionado: PC de Trabajo</p>
+                    <p class="log-entry warning">⚡ Ataque seleccionado: Fuerza Bruta</p>
+                    <p class="log-entry">🔄 Iniciando Fuerza Bruta contra PC de Trabajo...</p>
+                    <p class="log-entry">🔍 Probando combinaciones de contraseñas (30%)</p>
+                    <p class="log-entry">🔍 Probando combinaciones de contraseñas (60%)</p>
+                    <p class="log-entry success">✅ ¡Ataque exitoso! PC de Trabajo comprometido</p>
+                    <p class="log-entry">📱 Dispositivo seleccionado: Smartphone</p>
+                    <p class="log-entry warning">⚡ Ataque seleccionado: Phishing</p>
+                    <p class="log-entry">🔄 Iniciando Phishing contra Smartphone...</p>
+                    <p class="log-entry">📧 Enviando correo de phishing (50%)</p>
+                    <p class="log-entry success">✅ ¡Ataque exitoso! Smartphone comprometido</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="panel attacks">
+        <h3>// Tipo de ataque</h3>
+        <div class="attacks-grid">
+            <div class="attack-item red active">
+                <span class="attack-dot">●</span> Fuerza Bruta
+            </div>
+            <div class="attack-item orange">
+                <span class="attack-dot">●</span> Ataque Diccionario
+            </div>
+            <div class="attack-item purple">
+                <span class="attack-dot">●</span> Credential Stuffing
+            </div>
+            <div class="attack-item yellow">
+                <span class="attack-dot">●</span> Phishing
+            </div>
+        </div>
+    </div>
+
+    </section>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer class="pie-pagina">
+    <div class="contenido-pie">
+      <a href="index.html" class="logo" aria-label="Ghost Internet - inicio">
+        <div class="logo__contenedor-icono">
+          <img src="../SVG/escudo.svg" alt="" class="logo__icono" aria-hidden="true" />
+        </div>
+        <span class="logo__texto logo__texto--pie">
+          GHOST<span class="logo__guion">_</span>NET
+        </span>
+        <span class="logo__version">v2.4.1</span>
+      </a>
+
+      <nav class="enlaces-pie" aria-label="Mapa del sitio">
+        <a href="index.html">Inicio</a>
+        <a href="EvaluacionContraseña.html">Contraseñas</a>
+        <a href="VerificarCorreo.html">Correos</a>
+        <a href="Estadisticas.html">Estadísticas</a>
+        <a href="simulador.html">Simulador</a>
+      </nav>
+
+      <small class="derechos-reservados">
+        © 2026 Ghost Internet — Solo fines educativos
+      </small>
+    </div>
+  </footer>
+
+</body>
+</html>
